@@ -14,14 +14,16 @@ Summary: Canonical correlation analysis and maximum correlation via projection p
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-ccapp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-ccapp-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-ccapp-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-ccapp-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-ccapp-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-ccapp-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-ccapp-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-ccapp-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-ccapp-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-ccapp-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-ccapp-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-ccapp-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-ccapp/badges/version.svg)](https://anaconda.org/conda-forge/r-ccapp)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-ccapp/badges/downloads.svg)](https://anaconda.org/conda-forge/r-ccapp)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--ccapp-green.svg)](https://anaconda.org/conda-forge/r-ccapp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-ccapp.svg)](https://anaconda.org/conda-forge/r-ccapp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-ccapp.svg)](https://anaconda.org/conda-forge/r-ccapp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-ccapp.svg)](https://anaconda.org/conda-forge/r-ccapp) |
 
 Installing r-ccapp
 ==================

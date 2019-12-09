@@ -1,4 +1,4 @@
-{% set version = '0.3.2' %}
+{% set version = "0.3.3" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -13,11 +13,11 @@ source:
     - https://cran.r-project.org/src/contrib/ccaPP_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/ccaPP/ccaPP_{{ version }}.tar.gz
 
-  sha256: f27e556f523aa09af4c8a8460b37b2975ddd69f3f431157215e42eac31bfda98
+  sha256: 134246c12bec9b7da5be2a46ec6baec9098e91d233c23f1d9ca0a463607c08dc
 
 build:
   merge_build_host: True  # [win]
-  number: 1003
+  number: 0
   skip: true  # [win32]
 
   rpaths:

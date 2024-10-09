@@ -1,4 +1,4 @@
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ccaPP_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ccaPP/ccaPP_{{ version }}.tar.gz
-  sha256: 134246c12bec9b7da5be2a46ec6baec9098e91d233c23f1d9ca0a463607c08dc
+  sha256: a51162e5ec62a73773d98647d646d42c3c3b15119253fb997cc25489394a7c99
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,9 +51,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=ccaPP
   license: GPL-2.0-or-later
-  summary: Canonical correlation analysis and maximum correlation via projection pursuit, as
-    well as fast implementations of correlation estimators, with a focus on robust and
-    nonparametric methods.
+  summary: Canonical correlation analysis and maximum correlation via projection pursuit, as well as fast implementations of correlation estimators, with a focus on robust and nonparametric methods.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'

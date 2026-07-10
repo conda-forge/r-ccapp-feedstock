@@ -7,7 +7,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ccapp-feedsto
 About r-ccapp
 -------------
 
-Home: https://CRAN.R-project.org/package=ccaPP
+Home: https://github.com/aalfons/ccaPP
 
 Package license: GPL-2.0-or-later
 
@@ -16,7 +16,7 @@ Summary: Canonical correlation analysis and maximum correlation via projection p
 About r-ccapp
 -------------
 
-Home: https://CRAN.R-project.org/package=ccaPP
+Home: https://github.com/aalfons/ccaPP
 
 Package license: GPL-2.0-or-later
 
@@ -58,6 +58,20 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4177&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-ccapp-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.5" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_r_base4.4</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4177&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-ccapp-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_r_base4.4" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_r_base4.5</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4177&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-ccapp-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_r_base4.5" alt="variant">
                 </a>
               </td>
             </tr><tr>

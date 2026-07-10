@@ -16,31 +16,41 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win]
-    - {{ stdlib("c") }}                # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - {{ stdlib("m2w64_c") }}          # [win]
-    - {{ compiler('cxx') }}            # [not win]
-    - {{ compiler('m2w64_cxx') }}      # [win]
-    - {{ posix }}filesystem        # [win]
+    - cross-r-base {{ r_base }}      # [build_platform != target_platform]
+    - r-pcapp >=1.8_1                # [build_platform != target_platform]
+    - r-rcpp >=0.11.0                # [build_platform != target_platform]
+    - r-rcpparmadillo >=0.7.200.1.0  # [build_platform != target_platform]
+    - r-robustbase                   # [build_platform != target_platform]
+    - {{ compiler('c') }}            # [not win]
+    - {{ stdlib("c") }}              # [not win]
+    - {{ compiler('m2w64_c') }}      # [win]
+    - {{ stdlib("m2w64_c") }}        # [win]
+    - {{ compiler('cxx') }}          # [not win]
+    - {{ compiler('m2w64_cxx') }}    # [win]
+    - {{ posix }}filesystem          # [win]
     - {{ posix }}make
-    - {{ posix }}sed               # [win]
-    - {{ posix }}coreutils         # [win]
-    - {{ posix }}zip               # [win]
+    - {{ posix }}sed                 # [win]
+    - {{ posix }}coreutils           # [win]
+    - {{ posix }}zip                 # [win]
   host:
     - r-base
-    - r-rcpp >=0.11.0
-    - r-rcpparmadillo >=0.4.100.0
     - r-pcapp >=1.8_1
+    - r-rcpp >=0.11.0
+    - r-rcpparmadillo >=0.7.200.1.0
     - r-robustbase
+    - libblas
+    - liblapack
   run:
     - r-base
-    - r-rcpp >=0.11.0
-    - r-rcpparmadillo >=0.4.100.0
     - r-pcapp >=1.8_1
+    - r-rcpp >=0.11.0
     - r-robustbase
 
 test:
@@ -49,12 +59,13 @@ test:
     - "\"%R%\" -e \"library('ccaPP')\""  # [win]
 
 about:
-  home: https://CRAN.R-project.org/package=ccaPP
+  home: https://github.com/aalfons/ccaPP
   license: GPL-2.0-or-later
   summary: Canonical correlation analysis and maximum correlation via projection pursuit, as well as fast implementations of correlation estimators, with a focus on robust and nonparametric methods.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
@@ -62,26 +73,3 @@ extra:
     - MathiasHaudgaard
     - FrodePedersen
     - ArneKr
-
-# Package: ccaPP
-# Type: Package
-# Title: (Robust) Canonical Correlation Analysis via Projection Pursuit
-# Version: 0.3.3
-# Date: 2019-12-09
-# Depends: R (>= 3.2.0), parallel, pcaPP (>= 1.8-1), robustbase
-# Imports: Rcpp (>= 0.11.0)
-# LinkingTo: Rcpp (>= 0.11.0), RcppArmadillo (>= 0.4.100.0)
-# Suggests: knitr, mvtnorm
-# VignetteBuilder: knitr
-# Description: Canonical correlation analysis and maximum correlation via projection pursuit, as well as fast implementations of correlation estimators, with a focus on robust and nonparametric methods.
-# License: GPL (>= 2)
-# LazyLoad: yes
-# Authors@R: c(person("Andreas", "Alfons", email = "alfons@ese.eur.nl", role = c("aut", "cre")), person("David", "Simcha", role = "ctb"))
-# Author: Andreas Alfons [aut, cre], David Simcha [ctb]
-# Maintainer: Andreas Alfons <alfons@ese.eur.nl>
-# Encoding: UTF-8
-# RoxygenNote: 6.1.1
-# NeedsCompilation: yes
-# Packaged: 2019-12-09 10:52:53 UTC; andreas
-# Repository: CRAN
-# Date/Publication: 2019-12-09 12:40:02 UTC

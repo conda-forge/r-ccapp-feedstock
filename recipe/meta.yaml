@@ -1,4 +1,4 @@
-{% set version = "0.3.5" %}
+{% set version = "0.3.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ccaPP_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ccaPP/ccaPP_{{ version }}.tar.gz
-  sha256: b37a99c47269f8705d3230d1fe60efbdd275946326395b18316e9c4a6c14fe48
+  sha256: 2f59eed30c06608a8994af51affcb22d9651143a75aa2da236b640eb93264fc7
 
 build:
   number: 0
